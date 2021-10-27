@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --header-height:3rem;
+
+    /* Colors */
+    --body-color:#A399D1;
+    --text-color:#303056;
+    --btn-color:#FF5B79;
+
+    /* Font-family */
+    --poppins: 'Poppins', sans-serif;
+
+    /* font-size */
+    --biggest-font-size:2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* Font weight */
+    --medium:500;
+    --semi-bold:600;
+    --bold:700;
+
+    /* Z-index */
+    --z-tooltip:10;
+    --z-fixed:100;
+
+    /* margin-bottom */
+    --mb-0-25:.25rem;
+    --mb-0-5:.5rem;
+    --mb-0-75:.75rem;
+    --mb-1:1rem;
+    --mb-1-25:1.25rem;
+    --mb-1-5:1.5rem;
+    --mb-2:2rem;
+    --mb-2-5:2.5rem;
+    --mb-3:3rem;
+}
+
+@media screen and (min-width: 992px) {
+    :root{
+        --biggest-font-size:4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    
+    }
+}   
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+button, input{
+    border: none;
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+    font-family: var(--poppins);
+    font-size: var(--normal-font-size);
+}
+
+
+body{
+    background-color: var(--body-color);
+    font-family: var(--poppins);
+    min-height: 100vh;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    margin: var(--header-height) 0 0 0;
+}
+
+.section{
+    padding: 4.5rem 0 2.5rem;
+}
+
+.section__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+}
+
+.container{
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+
+.grid{
+    display: grid;
+}
+
+.main{
+    overflow: hidden;
+}
+
+.hero{
+    width: 100%;
+    background-color:transparent;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2rem;
+}
+
