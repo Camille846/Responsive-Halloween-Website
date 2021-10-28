@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;900&display=swap');
 
 :root{
     --header-height:3rem;
@@ -7,6 +7,7 @@
 
     --body-color: linear-gradient(45deg, hsl(264, 52%, 80%) 0%, hsl(243, 33%, 65%) 100%);
     --nav-color: linear-gradient(45deg, hsl(264, 52%, 75%) 0%, hsl(243, 33%, 60%) 100%);
+    --hero-color: linear-gradient(45deg, hsl(248, 36%, 69%) 0%, hsl(244, 34%, 66%) 100%);
     --text-color:#303056;
     --btn-color:#FF5B79;
     --white:#f8f8fd;
@@ -15,7 +16,7 @@
     --poppins: 'Poppins', sans-serif;
 
     /* font-size */
-    --biggest-font-size:2rem;
+    --biggest-font-size:2.5rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
@@ -27,6 +28,7 @@
     --medium:500;
     --semi-bold:600;
     --bold:700;
+    --black:900;
 
     /* Z-index */
     --z-tooltip:10;
@@ -93,6 +95,17 @@ button{
     font-size: var(--normal-font-size);
 }
 
+h1{
+    font-size: var(--h1-font-size);
+}
+
+h2{
+    font-size: var(--h2-font-size);
+}
+
+h3{
+    font-size: var(--h3-font-size);
+}
 
 body{
     background-image: var(--body-color);
@@ -115,21 +128,19 @@ body{
 
 .container{
     max-width: 968px;
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
 }
 
 .grid{
     display: grid;
 }
 
-.main{
-    overflow: hidden;
-}
-
 .hero{
     width: 100%;
-    background-color:transparent;
+    background-image:var(--hero-color);
+    /* background-color: transparent; */
+    height: var(--header-height);
     position: fixed;
     top:0;
     left:0;
@@ -142,6 +153,7 @@ body{
     align-items: center;
     row-gap: 2rem;
     height: var(--header-height);
+    background-color: transparent;
 }
 
 .nav__menu{
@@ -190,6 +202,15 @@ body{
 
 .button-ghost{
     color: var(--white);   
+    font-weight: var(--semi-bold);
+    padding: 1rem;
+    border:2px solid var(--white);
+    border-radius: 41px;
+    transition: .3s;
+}
+
+.button-ghost:hover{
+    background-color: hsla(243, 33%, 60%, .8);
 }
 
 @media screen and (max-width:767px){
@@ -236,6 +257,78 @@ body{
 
 .nav__logo-img{
     width: 1.5rem;
+}
+
+
+.graveyard__group{
+    position: relative;
+    padding-top:2rem;
+}
+
+.graveyard__img{
+    justify-self: center;
+    height: 250px;
+}
+
+.graveyard__group .graveyard__indicator{
+    background-color: var(--white);
+    height: 100px;
+    width: 1px;
+    position: absolute;
+    top: 15rem;
+    right: 2rem;
+}
+
+.graveyard__indicator::before{
+    content: "";
+    background-color: var(--white);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: -3px;
+}
+
+.graveyard__details{
+    display: block;
+    color:var(--white);
+    text-align: right;
+    padding-right: 3rem;
+    margin-bottom: var(--mb-2-5);
+}
+
+.graveyard__content{
+    row-gap: 1rem;
+    text-align: left;
+}
+
+.graveyard__title, .graveyard__subtitle{
+    text-transform: uppercase;
+
+}
+
+.graveyard__title{
+    font-size: var(--biggest-font-size);
+    font-weight: var(--black);
+}
+
+.graveyard__description{
+    font-size: var(--normal-font-size);
+    line-height: 30px;
+}
+
+.graveyard__buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-book{
+    background-color: var(--btn-color);
+    color: var(--white);
+    font-weight: var(--semi-bold);
+    padding: 1rem 1.75rem;
+    border-radius: 30px 0 30px 0;
 }
 
 @media screen and (min-width:768px){
