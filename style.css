@@ -167,22 +167,6 @@ body{
     position: relative;
 }
 
-/* .nav__items img{
-    padding-right: .7em;
-    position: relative;
-    top: 5px;
-    left: 5px;
-
-} */
-
-.nav__icons{
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 2.5rem;
-    font-size: var(--h2-font-size);
-    cursor: pointer;
-}
-
 .nav__link{
     color:var(--white);
 }
@@ -190,7 +174,7 @@ body{
 .nav__items::before{
     content: "";
     position: absolute;
-    left: -12%;
+    left: -25px;
     top: 0;
     transition: all .6s;
 }
@@ -199,7 +183,8 @@ body{
     content:"👻";
 }
 
-.nav__items:hover{
+.nav__items:hover .nav__link{
+    color:var(--text-color);
     font-weight: var(--bold);
 }
 
@@ -253,3 +238,35 @@ body{
     width: 1.5rem;
 }
 
+@media screen and (min-width:768px){
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav__menu{
+        flex-direction: row;
+    }
+
+    .nav__list{
+        flex-direction: row;
+        column-gap: 2.5rem;
+    }
+
+    .nav__toggle, .nav__close{
+        display: none;
+    }
+       
+}
+
+@media screen and (min-width:1024px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .container{
+        max-width: 1024px;
+    }
+}
