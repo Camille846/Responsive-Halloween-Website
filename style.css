@@ -4,9 +4,12 @@
     --header-height:3rem;
 
     /* Colors */
-    --body-color:#A399D1;
+
+    --body-color: linear-gradient(45deg, hsl(264, 52%, 80%) 0%, hsl(243, 33%, 65%) 100%);
+    --nav-color: linear-gradient(45deg, hsl(264, 52%, 75%) 0%, hsl(243, 33%, 60%) 100%);
     --text-color:#303056;
     --btn-color:#FF5B79;
+    --white:#f8f8fd;
 
     /* Font-family */
     --poppins: 'Poppins', sans-serif;
@@ -67,6 +70,7 @@ html{
 
 a{
     text-decoration: none;
+    color:var(--text-color);
 }
 
 li{
@@ -91,7 +95,7 @@ button{
 
 
 body{
-    background-color: var(--body-color);
+    background-image: var(--body-color);
     font-family: var(--poppins);
     min-height: 100vh;
     font-size: var(--normal-font-size);
@@ -137,6 +141,7 @@ body{
     justify-content: space-between;
     align-items: center;
     row-gap: 2rem;
+    height: var(--header-height);
 }
 
 .nav__menu{
@@ -157,16 +162,18 @@ body{
 .nav__items{
     cursor: pointer;
     font-size: var(--normal-font-size);
+    font-weight: var(--medium);
+    color:var(--white);
+    position: relative;
 }
 
-.nav__items i{
+/* .nav__items img{
     padding-right: .7em;
-    font-size: var(--h2-font-size);
     position: relative;
     top: 5px;
     left: 5px;
 
-}
+} */
 
 .nav__icons{
     display: flex;
@@ -177,20 +184,40 @@ body{
 }
 
 .nav__link{
-    color:var(--text-color);
+    color:var(--white);
+}
+
+.nav__items::before{
+    content: "";
+    position: absolute;
+    left: -12%;
+    top: 0;
+    transition: all .6s;
+}
+
+.nav__items:hover::before{
+    content:"👻";
+}
+
+.nav__items:hover{
+    font-weight: var(--bold);
+}
+
+.button-ghost{
+    color: var(--white);   
 }
 
 @media screen and (max-width:767px){
     .nav__menu{
         position: fixed;
-        background-color: var(--body-color);
+        background-image: var(--nav-color);
         top:0;
         right: -150%;
         width: 70%;
         height: 100%;
         box-shadow: -1px 0 4px rgba(117, 110, 150, 0.5);
         padding: 3.5rem;
-        transition: ease .5s;
+        transition: all .6s;
         z-index: var(--z-fixed);
     }
 }
@@ -198,14 +225,15 @@ body{
 .nav__toggle{
     font-size: 1.2rem;
     cursor: pointer;
+    color: var(--white);
 }
 
 .nav__close{
+    color: var(--white);
     position: absolute;
     top:.75rem;
     right: 1rem;
     font-size: 1.5rem;
-    color: var(---text-color);
     cursor: pointer;
 }
 
@@ -214,9 +242,14 @@ body{
 }
 
 .logo{
-    text-decoration: none;
-    font-size: var(--biggest-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+    font-weight: var(--medium);
+    color: var(--white);
 }
 
-
+.nav__logo-img{
+    width: 1.5rem;
+}
 
