@@ -7,7 +7,7 @@
 
     --body-color: linear-gradient(45deg, hsl(264, 52%, 80%) 0%, hsl(243, 33%, 65%) 100%);
     --nav-color: linear-gradient(45deg, hsl(264, 52%, 75%) 0%, hsl(243, 33%, 60%) 100%);
-    --hero-color: linear-gradient(45deg, hsl(248, 36%, 69%) 0%, hsl(244, 34%, 66%) 100%);
+    --hero-color: linear-gradient(45deg, hsl(248, 52%, 71%) 0%, hsl(244, 34%, 66%) 100%);
     --text-color:#303056;
     --btn-color:#FF5B79;
     --white:#f8f8fd;
@@ -139,8 +139,6 @@ body{
 .hero{
     width: 100%;
     background-image:var(--hero-color);
-    /* background-color: transparent; */
-    height: var(--header-height);
     position: fixed;
     top:0;
     left:0;
@@ -203,7 +201,7 @@ body{
 .button-ghost{
     color: var(--white);   
     font-weight: var(--semi-bold);
-    padding: 1rem;
+    padding: .5rem;
     border:2px solid var(--white);
     border-radius: 41px;
     transition: .3s;
@@ -321,12 +319,12 @@ body{
 .graveyard__buttons{
     display: flex;
     justify-content: space-between;
+    font-weight: var(--semi-bold);
 }
 
 .button-book{
     background-color: var(--btn-color);
     color: var(--white);
-    font-weight: var(--semi-bold);
     padding: 1rem 1.75rem;
     border-radius: 30px 0 30px 0;
 }
