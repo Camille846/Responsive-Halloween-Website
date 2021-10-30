@@ -10,9 +10,11 @@
     --body-color: linear-gradient(45deg, hsl(264, 52%, 80%) 0%, hsl(243, 33%, 65%) 100%);
     --nav-color: linear-gradient(45deg, hsl(264, 52%, 75%) 0%, hsl(243, 33%, 60%) 100%);
     --hero-color: linear-gradient(45deg, hsl(248, 52%, 71%) 0%, hsl(244, 34%, 66%) 100%);
+    --trick-color: linear-gradient(45deg, hsl(248, 48%, 56%) 0%, hsl(244, 22%, 45%) 100%);
     --text-color:#303056;
     --btn-color:#FF5B79;
     --btn-color-hover: #e41339;
+    --support-hover:hsla(243, 33%, 60%, .8);
     --white:#f8f8fd;
 
     /* Font-family */
@@ -121,6 +123,54 @@ body{
     margin: var(--header-height) 0 0 0;
 }
 
+body.second-theme{
+    --body-color: linear-gradient(45deg, hsl(265, 82%, 28%) 0%, hsl(265, 82%, 28%) 100%);
+    --nav-color: linear-gradient(45deg, hsl(266, 78%, 15%) 0%, hsl(265, 82%, 28%) 100%);
+    --hero-color: linear-gradient(45deg, hsl(266, 78%, 15%) 0%, hsl(265, 82%, 28%) 100%);
+    --trick-color: linear-gradient(45deg, hsl(266, 78%, 15%) 0%, hsl(265, 82%, 20%) 100%);
+    --text-color:#f8f8fd;
+    --btn-color:#FF5B79;
+    --btn-color-hover: #e41339;
+    --support-hover:hsla(265, 82%, 50%, .8);
+    --white:#f8f8fd;    
+}
+
+body.third-theme{
+    --body-color: linear-gradient(45deg, 	hsl(338, 54%, 13%) 0%, 	hsl(338, 54%, 13%) 100%);
+    --nav-color: linear-gradient(45deg, 	hsl(338, 54%, 15%) 0%, 	hsl(338, 54%, 28%) 100%);
+    --hero-color: linear-gradient(45deg, 	hsl(338, 54%, 15%) 0%, 	hsl(338, 54%, 28%) 100%);
+    --trick-color: linear-gradient(45deg, hsl(338, 54%, 19%) 0%, hsl(338, 54%, 28%) 100%);
+    --text-color:#f8f8fd;
+    --btn-color:#FF5B79;
+    --btn-color-hover: #e41339;
+    --support-hover:hsla(338, 54%, 50%, .8);
+    --white:#f8f8fd;    
+}
+
+body.forth-theme{
+    --body-color: linear-gradient(45deg, hsl(125, 28%, 35%) 0%, hsl(125, 28%, 35%)100%);
+    --nav-color: linear-gradient(45deg, hsl(125, 28%, 15%) 0%, 		hsl(125, 28%, 28%) 100%);
+    --hero-color: linear-gradient(45deg, hsl(125, 28%, 15%) 0%, 		hsl(125, 28%, 28%) 100%);
+    --trick-color: linear-gradient(45deg, hsl(125, 28%, 5%) 0%, 		hsl(125, 28%, 18%) 100%);
+    --text-color:#f8f8fd;
+    --btn-color:#FF5B79;
+    --btn-color-hover: #e41339;
+    --support-hover:hsla(125, 28%, 50%, .8);
+    --white:#f8f8fd;    
+}
+
+body.teste{
+    --body-color: linear-gradient(45deg, hsl(9, 87%, 50%) 0%, hsl(9, 86%, 47%)100%);
+    --nav-color: linear-gradient(45deg, hsl(125, 28%, 15%) 0%, 		hsl(125, 28%, 28%) 100%);
+    --hero-color: linear-gradient(45deg, hsl(125, 28%, 15%) 0%, 		hsl(125, 28%, 28%) 100%);
+    --trick-color: linear-gradient(45deg, hsl(125, 28%, 5%) 0%, 		hsl(125, 28%, 18%) 100%);
+    --text-color:#f8f8fd;
+    --btn-color:#FF5B79;
+    --btn-color-hover: #e41339;
+    --support-hover:hsla(125, 28%, 50%, .8);
+    --white:#f8f8fd;    
+}
+
 .section{
     padding: 4.5rem 0 2.5rem;
 }
@@ -213,7 +263,7 @@ body{
 }
 
 .button-ghost:hover{
-    background-color: hsla(243, 33%, 60%, .8);
+    background-color: var(--support-hover);
 }
 
 @media screen and (max-width:767px){
@@ -394,7 +444,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .trick{
-    background-color: #3E0D84;
+    background-image: var(--trick-color);
     border-radius: 30px;
     text-align: center;
     padding: 3rem;
@@ -464,7 +514,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     max-width: 90%;
     margin: 10% auto;
     padding: 20px;
-    background-color: #212121;
+    background-color: #0f0f0f;
     border-radius: 10px;
     animation: animateTrick ease .3s;
     position: relative;
