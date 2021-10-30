@@ -15,6 +15,7 @@
     --btn-color:#FF5B79;
     --btn-color-hover: #e41339;
     --support-hover:hsla(243, 33%, 60%, .8);
+    --shop-card:rgba(103, 101, 143, 0.2);
     --white:#f8f8fd;
 
     /* Font-family */
@@ -132,6 +133,7 @@ body.second-theme{
     --btn-color:#FF5B79;
     --btn-color-hover: #e41339;
     --support-hover:hsla(265, 82%, 50%, .8);
+    --shop-card:rgba(103, 101, 143, 0.2);
     --white:#f8f8fd;    
 }
 
@@ -144,6 +146,7 @@ body.third-theme{
     --btn-color:#FF5B79;
     --btn-color-hover: #e41339;
     --support-hover:hsla(338, 54%, 50%, .8);
+    --shop-card:rgba(103, 101, 143, 0.2);
     --white:#f8f8fd;    
 }
 
@@ -156,6 +159,7 @@ body.forth-theme{
     --btn-color:#FF5B79;
     --btn-color-hover: #e41339;
     --support-hover:hsla(125, 28%, 50%, .8);
+    --shop-card:rgba(101, 143, 115, 0.7);
     --white:#f8f8fd;    
 }
 
@@ -1097,7 +1101,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     justify-content: center;
     align-items: center;
     row-gap: .5rem;
-    background-color: rgba(103, 101, 143, 0.2);
+    background-color: var(--shop-card);
     padding: 2rem 1rem;
     border-radius: 20px;
     position: relative;
