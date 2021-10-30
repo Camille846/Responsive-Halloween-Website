@@ -398,7 +398,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     padding-bottom: var(--mb-2-5);
     text-transform: uppercase;
     color: #FEC942;
-    letter-spacing: 1.5px;
+    letter-spacing: 5px;
+    font-family: var(--creepster);
+    font-size: var(--biggest-font-size);
 }
 
 .trick__btns{
@@ -430,7 +432,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: #E88513;
 }
 
-.trick__popup--wrapper{
+.trick__popup--wrapper, .treat__popup--wrapper{
     background: rgba(0,0,0,.5);
     position: fixed;
     top: 0;
@@ -458,7 +460,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     height: 500px;
 }
 
-.popup__close{
+.popup__close, .popup__close-treat{
     font-size:var(--h1-font-size);
     cursor: pointer;
     position: absolute;
@@ -467,7 +469,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     color: rgb(248,181,0);
 }
 
-.show-trick{
+.popup__close-treat{
+    color: #91348B;
+}
+
+.show-trick, .show-treat{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -938,6 +944,59 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     animation:         twitchMouth 770ms ease-in-out infinite; 
   }
 
+.treat-popup{
+    background-color: #ACC348;
+    height: 550px;
+}
+
+.treat__popup--wrapper img{
+    width: 200px;
+    height: 200px;
+}
+
+.treat__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    margin-bottom: var(--mb-1);
+    font-family: var(--poppins);
+}
+
+.treat-text{
+    font-family: var(--creepster);
+    color: #704D6B;
+    font-size: 48px;
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -ms-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+
+.treat-description{
+    color: #422d3f;
+    font-weight: var(--semi-bold);
+}
+
+.highlight-discount{
+    font-size: var(--biggest-font-size);
+    font-weight: var(--black);
+    text-transform: uppercase;
+}
+
+.btn-discount{
+    background-color: var(--btn-color);
+    color: var(--white);
+    padding: 1rem 1.75rem;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-discount:hover{
+    background-color: var(--btn-color-hover);
+}
 
 .shop{
     margin-bottom: var(--mb-3);
@@ -1070,11 +1129,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
         display: none;
     }
     
-    .graveyard{
-        display: grid;
-        grid-template-rows: repeat(4, 1fr);
-    }
-
     .popup{
         width: 60%;
         max-width: 60%;
