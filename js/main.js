@@ -23,3 +23,15 @@ function linkAction(){
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+// Initialize Swiper
+
+let swiper = new Swiper(".graveyard-swiper", {
+    loop: true,
+    spaceBetween: 32,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    keyboard: true,
+  });
