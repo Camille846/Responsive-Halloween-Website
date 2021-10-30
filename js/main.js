@@ -66,6 +66,11 @@ if(discountBtn){
     })
 }
 
+// Confetti Falling
+const confettiSettings = { target: 'my-canvas' };
+const confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();
+
 // Initialize Swiper
 
 let swiper = new Swiper(".graveyard-swiper", {
@@ -108,4 +113,8 @@ swiper.on("transitionEnd", function(e) {
     }
       
 });
+
+
+
+
 
