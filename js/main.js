@@ -1,6 +1,9 @@
 const navMenu = document.querySelector(".nav__menu")
 const navToggle = document.getElementById("nav-toggle")
 const navClose = document.getElementById("nav-close")
+const trickBtn = document.querySelector(".trick-btn")
+const trickWrapper = document.querySelector(".trick__popup--wrapper")
+const popupClose = document.querySelector(".popup__close")
 
 if(navToggle){
     navToggle.addEventListener("click", ()=>{
@@ -35,3 +38,17 @@ let swiper = new Swiper(".graveyard-swiper", {
     },
     keyboard: true,
   });
+
+// Trick pop-up
+
+if(trickBtn){
+    trickBtn.addEventListener("click", ()=>{
+        trickWrapper.classList.add("show-trick")
+    })
+}
+
+if(popupClose){
+    popupClose.addEventListener("click", ()=>{
+        trickWrapper.classList.remove("show-trick")
+    })
+}
