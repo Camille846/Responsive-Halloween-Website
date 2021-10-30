@@ -11,6 +11,7 @@
     --hero-color: linear-gradient(45deg, hsl(248, 52%, 71%) 0%, hsl(244, 34%, 66%) 100%);
     --text-color:#303056;
     --btn-color:#FF5B79;
+    --btn-color-hover: #e41339;
     --white:#f8f8fd;
 
     /* Font-family */
@@ -335,6 +336,9 @@ body{
     margin-bottom: var(--mb-2);
 }
 
+.button-book:hover{
+    background-color: var(--btn-color-hover);
+}
 
 /* SWIPER */
 .swiper {
@@ -346,7 +350,40 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: var(--white);
     opacity: 1;
 }
+
+.about{
+    text-align: center;
+}
+
+.about__content{
+    margin-bottom: var(--mb-3);
+
+}
   
+.about__title{
+    padding-bottom: var(--mb-1-5);
+    text-transform: uppercase;
+}
+
+.about__description{
+    font-size: var(--normal-font-size);
+    line-height: 2rem;
+    margin-bottom: var(--mb-2);
+}
+
+.button-more{
+    background-color: var(--btn-color);
+    color: var(--white);
+    padding: 1rem 1.75rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: var(--mb-2);
+}
+
+.button-more:hover{
+    background-color: var(--btn-color-hover);
+}
+
 .footer{
     row-gap: 5rem;
     justify-content: center;
@@ -398,7 +435,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     .nav__toggle, .nav__close{
         display: none;
     }
-       
+    
+    .graveyard{
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+    }
 }
 
 @media screen and (min-width:1024px){
