@@ -229,6 +229,11 @@ body{
         transition: all .6s;
         z-index: var(--z-fixed);
     }
+
+    .graveyard__group{
+        text-align: center;
+    }
+
 }
 
 .nav__toggle{
@@ -321,6 +326,7 @@ body{
 .graveyard__description{
     font-size: var(--normal-font-size);
     line-height: 30px;
+    margin-bottom: var(--mb-1-25);
 }
 
 .graveyard__buttons{
@@ -332,7 +338,7 @@ body{
 .button-book{
     background-color: var(--btn-color);
     color: var(--white);
-    padding: 1rem 1.75rem;
+    padding: 1rem;
     border-radius: 30px 0 30px 0;
     cursor: pointer;
     margin-bottom: var(--mb-2);
@@ -380,6 +386,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     border-radius: 30px;
     cursor: pointer;
     margin-bottom: var(--mb-2);
+    font-weight: var(--semi-bold);
 }
 
 .button-more:hover{
@@ -405,27 +412,32 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .trick__btns{
     display: flex;
-    flex-direction: row;
-    column-gap: 5rem;
-    justify-content: center;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    justify-content: space-around;
     align-items: center;
-
+    
 }
 
-.trick-btn{
-    margin: var(--mb-1-25);
+.trick__text{
+    color:var(--white);
+    text-transform: uppercase;
+    font-family: var(--creepster);
+    font-size: var(--h2-font-size);
 }
 
 .trick-btn, .treat-btn{
+    font-family: var(--creepster);
+    letter-spacing: 5px;
     border: 1px solid #FF6043;
     background-color: #FF6043;
     color: var(--white);
-    font-weight: var(--semi-bold);
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     border-radius: 30px;
     cursor: pointer;
     text-transform: uppercase;
     transition: .6s;
+    font-size: var(--h1-font-size);
 }
 
 .trick-btn:hover, .treat-btn:hover{
@@ -824,7 +836,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     -ms-filter: blur(10px);
     -o-filter: blur(10px);
     filter: blur(8px);
-    margin-top: 30px;
+    margin-top: 25px;
     z-index: -1;
     -webkit-transform: rotateX(45deg) rotateZ(180deg) rotateY(180deg) scaleX(1.1) scaleY(2);
     -moz-transform: rotateX(45deg) rotateZ(180deg) rotateY(180deg) scaleX(1.1) scaleY(2);
@@ -992,6 +1004,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     padding: 1rem 1.75rem;
     border-radius: 30px;
     cursor: pointer;
+    font-weight: var(--semi-bold);
 }
 
 .btn-discount:hover{
@@ -1005,10 +1018,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .shop__title{
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: var(--mb-1-25);
-    font-family: var(--creepster);
-    font-size: var(--biggest-font-size);
-    letter-spacing: 2px;
+    margin-bottom: var(--mb-1-5);
+    font-weight: var(--bold);
 }
 
 .shop__subtitle{
@@ -1040,6 +1051,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .card__title{
     text-transform: uppercase;
     padding-top: .5rem;
+    text-align: center;
 }
 
 .shop__img{
@@ -1090,10 +1102,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .footer-title{
-    font-family: var(--reenie);
+    font-family: var(--creepster);
+    text-align: center;
     font-size: var(--biggest-font-size);
     margin-top: var(--mb-3);
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb-1);
 }
 
 .footer-author{
@@ -1111,7 +1124,25 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     font-weight: var(--black);
  }
 
+ @media screen and (max-width:420px){
+    .trick__btns{
+        flex-direction: column;
+        row-gap: 1rem;
+     }
+ }
+
 @media screen and (min-width:768px){
+    :root{
+        --biggest-font-size:4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    
+    }
+
     .nav{
         height: calc(var(--header-height) + 1.5rem);
     }
@@ -1128,11 +1159,42 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     .nav__toggle, .nav__close{
         display: none;
     }
+
+    .graveyard__wrapper{
+        padding: 8rem 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    .graveyard__img{
+        height: 300px;
+    }
+
+    .graveyard__group .graveyard__indicator{
+        top: 20rem;
+    }
     
     .popup{
         width: 60%;
         max-width: 60%;
     }
+
+    .container{
+        margin-left: var(--mb-3);
+        margin-right: var(--mb-3);
+    }
+
+    .trick-btn, .treat-btn{
+        padding: 1rem 4rem;
+    }
+
+    .shop__content{
+        grid-template-columns: repeat(4,1fr);
+        gap: 1rem;
+    }
+
+   
 }
 
 @media screen and (min-width:1024px){
