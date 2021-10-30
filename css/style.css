@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
 :root{
     --header-height:3rem;
@@ -17,6 +18,7 @@
     /* Font-family */
     --poppins: 'Poppins', sans-serif;
     --reenie: 'Reenie Beanie', cursive;
+    --creepster: 'Creepster', cursive;
 
     /* font-size */
     --biggest-font-size:2.5rem;
@@ -385,7 +387,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .trick{
-    background-color: #1F0048;
+    background-color: #3E0D84;
     border-radius: 30px;
     text-align: center;
     padding: 3rem;
@@ -419,6 +421,80 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .trick-btn:hover, .treat-btn:hover{
     background-color: #E88513;
+}
+
+.shop{
+    margin-bottom: var(--mb-3);
+}
+
+.shop__title{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: var(--mb-1-25);
+    font-family: var(--creepster);
+    font-size: var(--biggest-font-size);
+    letter-spacing: 2px;
+}
+
+.shop__subtitle{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: var(--semi-bold);
+    margin-bottom: var(--mb-1-5);
+}
+
+.shop__content{
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.shop__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: .5rem;
+    background-color: rgba(103, 101, 143, 0.2);
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    position: relative;
+    z-index: var(--z-tooltip);
+    overflow: hidden;
+    transition: ease .6s;
+}
+
+.shop__img{
+    height: 180px;
+    cursor: pointer;
+}
+
+.shop__price{
+    font-weight: var(--semi-bold);
+}
+
+.shop__icon{
+    background-color: var(--btn-color);
+    padding: .75rem 1rem;
+    border-radius: 5px;
+    align-self: flex-end;
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    transition: ease .6s;
+    cursor: pointer;
+}
+
+.shop__icon i{
+    color: var(--white);
+}
+
+.shop__card:hover .shop__icon{
+   right: 0;
+   bottom: 0;
+}
+
+.shop__icon:hover{
+    background-color: var(--btn-color-hover);
 }
 
 
