@@ -2,8 +2,12 @@ const navMenu = document.querySelector(".nav__menu")
 const navToggle = document.getElementById("nav-toggle")
 const navClose = document.getElementById("nav-close")
 const trickBtn = document.querySelector(".trick-btn")
+const treatBtn = document.querySelector(".treat-btn")
 const trickWrapper = document.querySelector(".trick__popup--wrapper")
+const treatWrapper = document.querySelector(".treat__popup--wrapper")
 const popupClose = document.querySelector(".popup__close")
+const closeTreat = document.querySelector(".popup__close-treat")
+const discountBtn = document.querySelector(".btn-discount")
 
 if(navToggle){
     navToggle.addEventListener("click", ()=>{
@@ -50,5 +54,25 @@ if(trickBtn){
 if(popupClose){
     popupClose.addEventListener("click", ()=>{
         trickWrapper.classList.remove("show-trick")
+    })
+}
+
+// Treat pop-up
+
+if(treatBtn){
+    treatBtn.addEventListener("click", ()=>{
+        treatWrapper.classList.add("show-treat")
+    })
+}
+
+if(closeTreat){
+    closeTreat.addEventListener("click", ()=>{
+        treatWrapper.classList.remove("show-treat")
+    })
+}
+
+if(discountBtn){
+    discountBtn.addEventListener("click", ()=>{
+        treatWrapper.classList.remove("show-treat")
     })
 }
