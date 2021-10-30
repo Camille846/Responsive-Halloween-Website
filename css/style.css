@@ -533,6 +533,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .popup__close-treat{
     color: #91348B;
+    z-index: var(--z-tooltip);
 }
 
 .show-trick, .show-treat{
@@ -1024,6 +1025,12 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     row-gap: 1rem;
     margin-bottom: var(--mb-1);
     font-family: var(--poppins);
+}
+
+#my-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .treat-text{
