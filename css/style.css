@@ -384,6 +384,44 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: var(--btn-color-hover);
 }
 
+.trick{
+    background-color: #1F0048;
+    border-radius: 30px;
+    text-align: center;
+    padding: 3rem;
+    margin-bottom: var(--mb-3);
+}
+  
+.trick__title{
+    padding-bottom: var(--mb-2-5);
+    text-transform: uppercase;
+    color: #FEC942;
+    letter-spacing: 1.5px;
+}
+
+.trick__btns{
+    display: flex;
+    column-gap: 1.5rem;
+    justify-content: center;
+}
+
+.trick-btn, .treat-btn{
+    border: 1px solid #FF6043;
+    background-color: #FF6043;
+    color: var(--white);
+    font-weight: var(--semi-bold);
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .6s;
+}
+
+.trick-btn:hover, .treat-btn:hover{
+    background-color: #E88513;
+}
+
+
 .footer{
     row-gap: 5rem;
     justify-content: center;
