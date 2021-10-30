@@ -31,17 +31,6 @@ function linkAction(){
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-// Initialize Swiper
-
-let swiper = new Swiper(".graveyard-swiper", {
-    loop: true,
-    spaceBetween: 32,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    keyboard: true,
-  });
 
 // Trick pop-up
 
@@ -76,3 +65,47 @@ if(discountBtn){
         treatWrapper.classList.remove("show-treat")
     })
 }
+
+// Initialize Swiper
+
+let swiper = new Swiper(".graveyard-swiper", {
+    loop: false,
+    spaceBetween: 32,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    keyboard: true,
+});
+
+// Change background
+swiper.on("transitionEnd", function(e) {
+    if(this.activeIndex==0){
+        document.body.classList.remove('second-theme');
+        document.body.classList.remove('third-theme');
+        document.body.classList.remove('forth-theme');
+    }
+
+    if(this.activeIndex==1){
+        //   document.querySelector(".swiper-slide-active").style.background = '#3E0D84';
+            document.body.classList.add('second-theme');
+            document.body.classList.remove('third-theme');
+            document.body.classList.remove('forth-theme');
+    }
+    
+    if(this.activeIndex==2){
+        // document.querySelector(".swiper-slide-active").style.background = '#320F1C';
+        document.body.classList.remove('second-theme');
+        document.body.classList.add('third-theme');
+        document.body.classList.remove('forth-theme');
+    }
+    
+    if(this.activeIndex==3){
+        // document.querySelector(".swiper-slide-active").style.background = '#417345';
+        document.body.classList.remove('second-theme');
+        document.body.classList.remove('third-theme');
+        document.body.classList.add('forth-theme');
+    }
+      
+});
+
