@@ -4,6 +4,7 @@
  ## 🕸️ Table of contents
 
 - [Overview](#about-the-project)
+- [Screenshot](#screenshot)
 - [UI Design](#ui-design)
 - [Built with](#built-with)
 - [References](#references)
@@ -17,6 +18,24 @@
 * Includes Pop-Up and CSS animations
 * Compatible with all mobile devices
 * Developed using mobile-first approach
+
+## 📸 Screenshot
+
+- First Theme
+
+![camille846 github io_Responsive-Halloween-Website_ (1)](https://user-images.githubusercontent.com/83260908/141382048-acb80705-fd97-4169-9baf-4f6f09bfb740.png)
+
+- Second Theme
+
+![camille846 github io_Responsive-Halloween-Website_ (2)](https://user-images.githubusercontent.com/83260908/141382066-91b02fd9-c202-4fed-bd08-43b33517bbbc.png)
+
+- Third Theme
+
+![camille846 github io_Responsive-Halloween-Website_ (3)](https://user-images.githubusercontent.com/83260908/141382085-d2749ee8-3af0-48f4-8a64-92ee9bb42f03.png)
+
+- Forth Theme
+
+![camille846 github io_Responsive-Halloween-Website_ (4)](https://user-images.githubusercontent.com/83260908/141382102-658c7440-c8ce-4f2f-8300-c2bfc95dd241.png)
 
 ## 🧟 UI Design
 My references for UI Design were taken from <a href="figma.com">Figma</a>:
